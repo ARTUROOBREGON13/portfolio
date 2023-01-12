@@ -43,7 +43,7 @@
 .logo-icon{
   max-width: 70px;
   height: 100%;
-  content:url("./assets/icons/logo_alt.png");
+  content:url("/assets/icons/logo_alt.png");
   margin: 1%;
   padding: 2%;
   @include neo(40px, transparent, 2px, #bebebe, transparent)
