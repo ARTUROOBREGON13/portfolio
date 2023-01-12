@@ -1,0 +1,9 @@
+<div class="menu-item" *ngFor="let item of menu; let i=index">
+  <a [class]="i===active ? 'active': ''" href='#' (click)="Select(i)">{{item.name}}</a>
+</div>
+
+<div class="menu-list">
+  <span class="material-symbols-outlined" (click)="OpenMenu()">
+    menu
+  </span>
+</div>

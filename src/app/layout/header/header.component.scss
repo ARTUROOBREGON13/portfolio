@@ -1,0 +1,50 @@
+@mixin media($xs, $sm, $md, $lg, $xl){
+  @media (min-width:320px) and (max-width:480px) {
+    width: $xs;
+  }
+  @media (min-width:481px) and (max-width:768px) {
+    width: $sm;
+  }
+  @media (min-width:769px) and (max-width:1024px) {
+    width: $md;
+  }
+  @media (min-width:1025px) and (max-width:1200px) {
+    width: $lg;
+  }
+  @media (min-width:1201px) {
+    width: $xl;
+  }
+}
+
+@mixin neo($radio, $color, $shadow, $main, $sec){
+  border-radius: $radio;
+  background-color: $color;
+  box-shadow: $shadow $shadow calc($shadow*2) $main,
+              (-$shadow) (-$shadow) calc($shadow*2) $sec;
+}
+
+.header {
+  // min-height: 10vmax;
+  padding: 0.5rem 1rem;
+  background: #101820;
+  display:flex;
+}
+
+.logo-container{
+  @include media(50%,calc(100%/4),calc(100%/3),calc(100%/4),calc(100%/4));
+  padding: 0.5rem 1rem;
+}
+
+.menu-container{
+  @include media(50%,calc(100%*3/4),calc(100%*2/3),calc(100%/2),calc(100%/2));
+  padding: 0.5rem 1rem;
+}
+
+.logo-icon{
+  max-width: 70px;
+  height: 100%;
+  content:url("/assets/icons/logo_alt.png");
+  margin: 1%;
+  padding: 2%;
+  @include neo(40px, transparent, 2px, #bebebe, transparent)
+}

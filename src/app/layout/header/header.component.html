@@ -1,0 +1,10 @@
+<div class="header">
+  <div class="logo-container">
+    <a href="/">
+      <img class="logo-icon">
+    </a>
+  </div>
+  <div class="menu-container">
+    <app-menu [menu]="MENU_ITEMS" [active]="active" (select)="redirect($event)" (open)="openMenu()"></app-menu>
+  </div>
+</div>
